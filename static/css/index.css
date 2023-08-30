@@ -203,14 +203,22 @@ body{
 }
 .form_container {
   flex: 1;
-  margin-left: 20%;
+  margin-left: 10%;
 }
+/* Logo */
+.logo{
+  color:  rgb(59, 9, 116);
+  font-weight: bold;
+  font-family: candara;
+  font-size: xx-large;
+}
+/* Logo ends */
 
 /* Registration Form  starts */
 .register-box {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 70%;
   width: 400px;
   padding: 40px;
   margin: 20px auto;
@@ -531,3 +539,20 @@ body{
     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
 /* Registration Form  ends */  
+
+/* Profile page Design starts */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the width as needed */
+  gap: 20px; /* Adjust the gap between profiles */
+}
+
+/* Style for each profile card */
+.profile-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile page design ends */

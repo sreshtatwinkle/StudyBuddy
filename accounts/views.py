@@ -2,7 +2,8 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import auth
 from .models import User
 from django.contrib import messages
-
+from django.contrib.auth import authenticate,login
+from django.contrib.auth.hashers import make_password
 
 
 # Create your views here.
@@ -32,13 +33,7 @@ def register_form(request):
         return redirect('/')
     else:
        return render(request,'register.html')
-        # if user.password != user.password2:
-        #     return redirect('register')
-        # elif user.username=='' or user.password=='':
-        #     messages.info(request,'some fields are empty')
-        #     return redirect('register')
-        # else:
-        #     user.save()
+      
     
 def login_form(request):
      if request.method == 'POST':
@@ -59,4 +54,7 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
      
-    
+def profiles(request):
+    users = User.objects.all()
+    context = {'users': users}
+    return render(request,'Profiles.html',context)    
