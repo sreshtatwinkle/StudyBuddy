@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Studybuddy_main_app',
-    'accounts',
     'chat_app',
+    'userprofile'
 ]
 
 MIDDLEWARE = [
@@ -54,6 +54,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Studybuddy.urls'
+
+
 
 TEMPLATES = [
     {
@@ -80,7 +82,7 @@ WSGI_APPLICATION = 'Studybuddy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Studybuddy_DB',
+        'NAME': 'BuddyLearnDB',
         'USER': 'postgres',
         'PASSWORD' : '1234',
         'HOST' : 'localhost'
@@ -133,6 +135,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

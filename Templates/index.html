@@ -31,21 +31,21 @@
           <ul class="navbar-nav mr-auto">
             {% if user.is_authenticated %}
             <li style="font-size: larger;" class="nav-item">
-            <a style="color: #3f3fa1;" class="nav-link" href="accounts/logout">Logout</a>
+            <a style="color: #3f3fa1;" class="nav-link" href="userprofile/logout">Logout</a>
             </li>
             <li style="font-size: larger;" class="nav-item">
-              <a style="color: #3f3fa1;" class="nav-link" href="accounts/profiles">Find a Mentor</a>
+              <a style="color: #3f3fa1;" class="nav-link" href="userprofile/profiles">Find a Mentor</a>
             </li>&nbsp;&nbsp;
             <li class="login_name" style="color: rgb(27, 40, 95);"> Welcome, {{user.username}}!!</li>
             {% else %}
             <li style="font-size: larger;" class="nav-item">
-              <a style="color: #3f3fa1;" class="nav-link" href="accounts/login">Find a Mentor</a>
+              <a style="color: #3f3fa1;" class="nav-link" href="userprofile/login">Find a Mentor</a>
             </li>
             <li style="font-size: larger;" class="nav-item">
-              <a style="color: #3f3fa1;" class="nav-link" href="accounts/login">Login</a>
+              <a style="color: #3f3fa1;" class="nav-link" href="userprofile/login">Login</a>
             </li>
             <li style="font-size: larger;" class="nav-item">
-              <a style="color: #3f3fa1;" class="nav-link" href="accounts/register">Register</a>
+              <a style="color: #3f3fa1;" class="nav-link" href="userprofile/register">Register</a>
             </li>
             {% endif %}
             <!-- <li style="font-size: larger;" class="nav-item dropdown">
