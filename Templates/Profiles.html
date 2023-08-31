@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="{%static '../static/css/index.css' %}">
-    <link rel="stylesheet" href="{%static '../static/css/index.css' %}">
     <title>StudyBuddy</title>
     <style>
         .profile_body{
@@ -148,70 +147,54 @@
             <label for="java"> Java</label><br>
             <input type="checkbox" class="filterCheckbox" id="deign" name="deign" value="Html">
             <label for="deign">HTML/CSS/JS</label><br>
-            <input type="checkbox" class="filterCheckbox" id="react" name="react" value="react">
+            <input type="checkbox" class="filterCheckbox" id="React" name="React" value="React">
             <label for="react"> React</label><br>
-            <input type="checkbox" class="filterCheckbox" id="computernetworks" name="computernetworks" value="computernetworks">
+            <input type="checkbox" class="filterCheckbox" id="CN" name="CN" value="CN">
             <label for="computernetworks"> Computer Networks</label><br>
             <input type="checkbox" class="filterCheckbox" id="database" name="database" value="database">
             <label for="database"> Database</label><br>
             <input type="checkbox" class="filterCheckbox" id="C++" name="C++" value="C++">
             <label for="C++"> C++</label><br>
-            <button class="gotochat_button">
+            <button class="">
                 <p>Go to Chat Room</p>
             </button>
         </div>
         <div class="profile-grid">
-            {% for user in users %}
-            {% if user.username != '' %}
-                <div class="profile-card" data-subjects="{{ user.subject }},{{ user.subject2 }}">
-                    <h2>{{ user.username }}</h2>
-                    <p>Can Guide : {{ user.subject }}</p>
-                    <p>Also specialized in : {{user.subject2}}</p>
-                    <a href="#">Connect</a>
-                </div>
-                {% endif %}
-            {% endfor %}
+          {% for user_profile in user_profiles %}
+          <div class="profile-card" data-subjects="{{ user_profile.module }},{{ user_profile.module2 }}">
+              <h2>{{ user_profile.user.username }}</h2>
+              <p>Can Guide: {{ user_profile.module }}</p>
+              <p>Also specialized in: {{ user_profile.module2 }}</p>
+              <a href="#">Connect</a>
+          </div>
+          {% endfor %}
         </div>
     </div>
     
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const checkboxes = document.querySelectorAll(".check_filter input[type='checkbox']");
-            const profiles = document.querySelectorAll(".profile-card");
-    
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener("change", updateProfiles);
-            });
-    
-            function updateProfiles() {
-                const selectedSubjects = Array.from(checkboxes)
-                    .filter(checkbox => checkbox.checked)
-                    .map(checkbox => checkbox.value);
-    
-                profiles.forEach(profile => {
-                    const userSubjects = profile.getAttribute("data-subjects").split(",");
-                    if (selectedSubjects.every(subject => userSubjects.includes(subject))) {
-                        profile.style.display = "block";
-                    } else {
-                        profile.style.display = "none";
-                    }
-                });
-            }
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            const searchInput = document.getElementById("searchInput");
-            const filterCheckboxes = document.querySelectorAll(".filterCheckbox");
-          
-            searchInput.addEventListener("input", function() {
-              const searchValue = searchInput.value.toLowerCase();
-          
-              filterCheckboxes.forEach(function(checkbox) {
-                const labelText = checkbox.nextElementSibling.textContent.toLowerCase();
-                const isVisible = labelText.includes(searchValue);
-          
-                checkbox.parentNode.style.display = isVisible ? "block" : "none";
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const checkboxes = document.querySelectorAll(".filterCheckbox");
+          const profileCards = document.querySelectorAll(".profile-card");
+      
+          checkboxes.forEach(checkbox => {
+              checkbox.addEventListener("change", function() {
+                  const selectedSubjects = Array.from(checkboxes)
+                      .filter(checkbox => checkbox.checked)
+                      .map(checkbox => checkbox.value);
+      
+                  profileCards.forEach(card => {
+                      const subjects = card.getAttribute("data-subjects").split(",");
+                      const isFiltered = selectedSubjects.some(subject => subjects.includes(subject));
+      
+                      if (isFiltered) {
+                          card.style.display = "block";
+                      } else {
+                          card.style.display = "none";
+                      }
+                  });
               });
-            });
           });
-    </script>
+      });
+      </script>
+      
 </html>

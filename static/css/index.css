@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0px;
+}
 body{
     
      background-image: url(../images/online-13.jpg);   
@@ -215,6 +219,47 @@ body{
 /* Logo ends */
 
 /* Registration Form  starts */
+.module_container{
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: rgb(68, 53, 99);
+  color: white;
+  margin-top: 0%;
+}
+.module_container p{
+  margin: 10px 0;
+}
+.module_container textarea{
+  height: 30px;
+}
+.module_container label{
+  display: block;
+  font-weight: bold;
+}
+.module_container input{
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.module_container input[type='submit']
+{
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.module_container input[type='submit']:hover{
+  background-color: #0056b3;
+}
+.reg_btn{
+  margin-top: 100%;
+}
 .register-box {
   position: absolute;
   top: 50%;

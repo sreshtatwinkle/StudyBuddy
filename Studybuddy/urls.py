@@ -20,5 +20,6 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Studybuddy_main_app.urls')),
-    path('accounts/',include('accounts.urls')),
+    path('userprofile/',include('userprofile.urls'))
+    
 ]
