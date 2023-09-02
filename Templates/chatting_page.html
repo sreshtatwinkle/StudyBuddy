@@ -1,0 +1,43 @@
+{% load static %}
+{%  static "images" as baseUrl %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="{%static '../static/css/chatpage.css' %}">
+</head>
+<body>
+    <a  class="navbar-brand logo" href="/">StudyBuddy</a>
+    <div class="container">
+    <div class="chat_list">
+        <nav class="sidebar">
+            <ul class="chat-list">
+                {% for user_profile in user_profiles %}
+                    <li><a href="#">{{ user_profile.username }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>        
+    </div>
+    <div id="chat">
+    <h1>Chat with {{ receiver.username }}</h1>
+      <div  class="chat_messages">
+        {% for message in messages %}
+            {%  if user.is_authenticated %}
+                {% if message.sender == user %}
+                    <p class="sent">{{ message.sender }}: {{ message.content }}</p>
+                {% else %}
+                    <p class="received">{{ message.sender }}: {{ message.content }}</p>
+                {% endif %}
+            {% endif %}    
+        {% endfor %}
+    </div>
+    <form method="post" action="{% url 'send_message' receiver.username %}">
+        {% csrf_token %}
+        <input type="text" placeholder="Type Message....." name="content">
+        <button type="submit">Send</button>
+    </form>
+</div>
+</div>
+</body>
+</html>
+

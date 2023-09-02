@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  
+}
+.chat-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chat-list li {
+  margin-bottom: 10px;
+}
+
+.chat-list a {
+  text-decoration: none;
+  color: white;
+}
+h1 {
+  background-color: #f0f0f0;
+  color: rgb(59, 55, 113);
+  padding: 10px;
+  border-color: #3e399a;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#chat {
+  border: 1px solid #a4a4ed;
+  padding: 10px;
+  float:right;
+  overflow-y: scroll;
+  margin-top: 0%;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 90vh;
+}
+.chat_messages {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+}
+form {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+p.sent {
+  background-color: #485fb5;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+  clear: both;
+  float: right; 
+}
+p.received {
+  background-color: #98aae6;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+  clear: both;
+  float: left; 
+}
+form {
+  margin-top: 10px;
+}
+input[type="text"] {
+  width: 90%;
+  height: 30%;
+  margin-top: 5%;
+  padding: 10px 0px;
+  position: static;
+  top: 0px;
+  border-radius: 7px;
+  border-color: rgb(159, 170, 183);
+  background-color: #f3f4ef;
+  
+}
+button {
+  padding: 10px;
+  background-color: rgb(97, 144, 97);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 70px;
+  height: 50px;
+  border-radius: 7px;
+  margin-top: 4%;
+}
+button:hover {
+  background-color: #3e399a;
+}
+.logo{
+  font-family: candara;
+  text-decoration: none;
+  font-size: xx-large;
+  color: #3e399a;
+  float: left;
+}
+.chat_list{
+float: left;
+background-color: #a4a4ed;
+}
