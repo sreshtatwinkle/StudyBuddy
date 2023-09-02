@@ -4,7 +4,7 @@
 }
 body{
     
-     background-image: url(../images/online-13.jpg);   
+  background-color: white; 
    
 }
 
@@ -167,7 +167,7 @@ body{
    }
    
    button:hover {
-    background-image: linear-gradient(90deg, #d253ef 0%, #3e0d37 50%, #ffa3e6 75%, #ef53d8 100%);
+    background-image: linear-gradient(90deg, #5377ef 0%, #3e0d37 50%, #a3b8ff 75%, #535def 100%);
     animation: slidernbw 5s linear infinite;
     color: #000;
    }

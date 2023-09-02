@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Studybuddy_main_app',
     'chat_app',
-    'userprofile'
+    'userprofile',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +75,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Studybuddy.wsgi.application'
+# ASGI_APPLICATION = 'Studybuddy.asgi.application'
 
 
 # Database

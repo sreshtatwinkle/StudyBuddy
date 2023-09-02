@@ -1,0 +1,131 @@
+.profile_body{
+    background-color: #f9f8fb;
+}
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; 
+    flex: 2; /* Adjust the flex value as needed */
+    padding: 10px;
+    margin-right: 5%;
+  }
+
+  
+  /* Style for each profile card */
+  .profile-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+   
+    background:  rgb(162, 142, 182);
+    color: #ddd;
+    box-shadow: 0 15px 25px rgba(31, 35, 44, 0.6);
+    border-radius: 10px;
+  }
+  .myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 30%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-left: 50%;
+    margin-right: 15%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); ;
+  }
+  .check_filter{
+    margin-top: 0%;
+    flex: 1; /* Adjust the flex value as needed */
+    padding: 10px;
+    color: #5f43b2;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .profile_container{
+    display: flex;
+  }
+  .profile_logout{
+    margin-right: 5%;
+  }
+  
+
+  .gotochat_button {
+    all: unset;
+    display: flex;
+    margin-top: 20%;
+    height: 10%;
+    align-items: center;
+    position: relative;
+    padding: 0.6em 2em;
+    border: rgb(68, 53, 99) solid 0.15em;
+    border-radius: 0.25em;
+    color: rgb(68, 53, 99);
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+  }
+  
+  .gotochat_button p {
+    z-index: 1;
+  }
+  
+  .gotochat_button:hover {
+    color: #212121;
+  }
+  
+  .gotochat_button:active {
+    border-color: rgb(68, 53, 99);
+  }
+  
+  .gotochat_button::after, .gotochat_button::before {
+    content: "";
+    position: absolute;
+    width:9em;
+    aspect-ratio: 1;
+    background: rgb(68, 53, 99);
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+  }
+  
+  .gotochat_button::before {
+    left: 0;
+    transform: translateX(-8em);
+  }
+  
+  .gotochat_button::after {
+    right: 0;
+    transform: translateX(8em);
+  }
+  
+  .gotochat_button:hover:before {
+    transform: translateX(-1em);
+  }
+  
+  .gotochat_button:hover:after {
+    transform: translateX(1em);
+  }
+  
+  .gotochat_button:active:before,
+  .gotochat_button:active:after {
+    background: rgb(68, 53, 99);
+  }
+  .logo{
+    color:  rgb(59, 9, 116);
+    font-weight: bold;
+    font-family: candara;
+    font-size: xx-large;
+  }
+  .connect_btn{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    background-color: #5f43b2;
+    border-radius: 7px;
+    margin-left: 25%;
+  }
+ 
