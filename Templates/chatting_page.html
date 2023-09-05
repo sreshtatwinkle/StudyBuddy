@@ -5,19 +5,14 @@
 <head>
     <title>Chat</title>
     <link rel="stylesheet" href="{%static '../static/css/chatpage.css' %}">
+    <style>
+        
+    </style>
 </head>
 <body>
     <a  class="navbar-brand logo" href="/">StudyBuddy</a>
+
     <div class="container">
-    <div class="chat_list">
-        <nav class="sidebar">
-            <ul class="chat-list">
-                {% for user_profile in user_profiles %}
-                    <li><a href="#">{{ user_profile.username }}</a></li>
-                {% endfor %}
-            </ul>
-        </nav>        
-    </div>
     <div id="chat">
     <h1>Chat with {{ receiver.username }}</h1>
       <div  class="chat_messages">
@@ -36,6 +31,7 @@
         <input type="text" placeholder="Type Message....." name="content">
         <button type="submit">Send</button>
     </form>
+</div>
 </div>
 </div>
 </body>

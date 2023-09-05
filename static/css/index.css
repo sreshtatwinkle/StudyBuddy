@@ -21,8 +21,8 @@ body{
     font-family: 'candara';
     font-size: larger;
     padding: 10px;
-
-    
+    max-width: 2px;
+    margin-left: 10%;   
 }
 .index_title{
     border-radius: 8px;
@@ -98,7 +98,7 @@ body{
   }
    
    .card_text {
-    width: 1000px;
+    width: 800px;
     height: 450px;
     background: rgb(38, 45, 82);;
     position: relative;
@@ -108,7 +108,7 @@ body{
     overflow: hidden;
     border-radius: 20px;
     margin-top: 1%;
-    margin-left: 10%;
+    margin-left: 30%;
   }
   
   .card_text h1 {
@@ -116,7 +116,7 @@ body{
     color: white;
     font-size: larger;
     margin-top: 0%;
-    margin-left: 10%;
+    margin-left: 5%;
   }
   .card_text p{
     color: white;
@@ -128,7 +128,7 @@ body{
     position: absolute;
     width: 100px;
     background-image: linear-gradient(180deg, rgb(136, 199, 224), rgb(219, 177, 219));
-    height: 130%;
+    height: 100%;
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
   }
@@ -177,10 +177,7 @@ body{
      background-position: 20vw;
     }
    }
-  .container-1{
-    
-     background-image: url(../images/online-13.jpg);
-  }
+  
    .container-2{
     margin-top: 50%;
    }
@@ -202,13 +199,14 @@ body{
 
 .flex_container {
   display: flex;
-  justify-content: space-between; /* Space between form and image */
+  justify-content: space-between; 
   align-items: center;
 }
 .form_container {
   flex: 1;
   margin-left: 10%;
 }
+
 /* Logo */
 .logo{
   color:  rgb(59, 9, 116);
@@ -224,9 +222,10 @@ body{
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background: rgb(68, 53, 99);
+  background: rgb(95, 80, 126);
   color: white;
-  margin-top: 0%;
+  margin-top: 0.5%;
+  font-size: small;
 }
 .module_container p{
   margin: 10px 0;
@@ -237,6 +236,8 @@ body{
 .module_container label{
   display: block;
   font-weight: bold;
+  font-size: small;
+
 }
 .module_container input{
   width: 100%;
@@ -257,9 +258,7 @@ body{
 .module_container input[type='submit']:hover{
   background-color: #0056b3;
 }
-.reg_btn{
-  margin-top: 100%;
-}
+
 .register-box {
   position: absolute;
   top: 50%;
@@ -268,7 +267,7 @@ body{
   padding: 40px;
   margin: 20px auto;
   transform: translate(-50%, -55%);
-  background:  rgb(68, 53, 99);
+  background:  rgb(104, 82, 150);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(31, 35, 44, 0.6);
   border-radius: 10px;
@@ -303,7 +302,7 @@ body{
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #786e6e;
+  color: #f8f3f3;
   background: transparent;
   border: none;
   border-bottom: 1px solid #fff;
@@ -379,7 +378,9 @@ body{
   background: linear-gradient(90deg, transparent, #fff);
   animation: btn-anim1 1.5s linear infinite;
 }
-
+::placeholder{
+  color: white;
+}
 @keyframes btn-anim1 {
   0% {
     left: -100%;

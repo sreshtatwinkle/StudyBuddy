@@ -17,19 +17,26 @@
     </style>
 </head>
 <body>
-  <a  style="font-size: x-large;" class="navbar-brand logo" href="/">StudyBuddy</a> 
+  <nobr>
+    <a class="navbar-brand logo" href="/"> StudyBuddy</a>
+    <a href="/"><img src="{% static '../static/images/homelogo.png'' %}" alt="StudyBuddy Logo" width="40" height="40"></a>
+    </nobr> 
+  <p><h5 style="color: red;">Note!</h5> If you have already added your modules and wish to make edits, you can do so here. Alternatively, if you haven't added your modules yet, proceed with adding modules or please click here to return to the homepage.</p>
   <div class="flex_container">
     <div class="regimg_container">
     <img src="../static/images/online-13.jpg" width="550" height="400">
+    
+
     </div>
     <div class="module_container">
-        <h5>Enter User Profile Data</h5>
+      
+        <h5>Just one more step to go!!! Enter User Profile Data</h5>
         <form  method="post" enctype="multipart/form-data">
           {% csrf_token %}
           <p >
           {{ form.as_p }}
           </p>
-          <button type="submit">Submit</button>
+          <button style="background-color: rgb(116, 50, 170);" type="submit">Submit</button>
         </form>   
     </div>
     </div>

@@ -26,7 +26,7 @@ h1 {
 #chat {
   border: 1px solid #a4a4ed;
   padding: 10px;
-  float:right;
+  margin-right: 40%;
   overflow-y: scroll;
   margin-top: 0%;
   display: flex;
@@ -62,6 +62,7 @@ p.received {
   margin: 5px 0;
   clear: both;
   float: left; 
+
 }
 form {
   margin-top: 10px;
@@ -101,5 +102,18 @@ button:hover {
 }
 .chat_list{
 float: left;
-background-color: #a4a4ed;
+color: black;
+margin-top: 10%;
+gap: 5px;
+}
+
+
+.chat_list_names{
+  color: black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: x-large;
+  
+}
+.chatting_page{
+  float: right;
 }
