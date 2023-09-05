@@ -12,15 +12,18 @@
     <title>Study Buddy</title>
 </head>
 <body>
-  <a  class="navbar-brand logo" href="/">StudyBuddy</a> 
+  <nobr>
+    <a class="navbar-brand logo" href="/"> StudyBuddy</a>
+    <a href="/"><img src="{% static '../static/images/homelogo.png'' %}" alt="StudyBuddy Logo" width="40" height="40"></a>
+  </nobr>
   <div class="flex_container">
     <div class="regimg_container">
-    <img src="../static/images/online-13.jpg" width="550" height="400">
+    <img style="margin-top: 10%;" src="../static/images/online-13.jpg" class="img-fluid rounded float-left" width="550" height="700">
     </div>
-  <div class="form_container">
-    <form class="register_form" action="login" method="post" >
+  <div  class="form_container">
+    <form  class="register_form" action="login" method="post" >
         {% csrf_token %}
-          <div class="register-box">
+          <div style="margin-top: 0%;" class="register-box">
             <p>Login to Your Account</p>
           <div class="user-box">
             <input type="text" class="form-control" name="username" id="username" placeholder="username">
@@ -31,8 +34,8 @@
           </div>
           <button type="submit" class="custom-btn btn-2">Submit</button>
       </form>
-  </div>
-      <p class="para_log">Not yet registered?<a href="/userprofile/register">Click here to Register</a></p>
+      <br><br>
+      <p  style="color: aliceblue;" class="para_log">Not yet registered?<a style="color: white;" href="/userprofile/register">Click here to Register</a></p>
       <div style="color: red;" class="error_message">
         {% for message in messages %}
         <h1>{{message}}</h1>

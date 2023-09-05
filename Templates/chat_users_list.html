@@ -1,0 +1,90 @@
+{% load static %}
+{%  static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBuddy</title>
+    <link rel="stylesheet" href="{% static '../static/css/chatpage.css' %}">
+    <style>
+        /* Style the chat list container */
+        .sidebar {
+            background-color: #969eca;
+            height: 70vh;
+            width: 100%;
+            position: fixed;
+            margin-top: 5%;
+            left: 0;
+            overflow-y: scroll;
+            border-right: 1px solid #ddd;
+        }
+
+        /* Style the individual chat list items */
+        ul.chat-list {
+            padding: 0;
+        }
+
+        ul.chat-list li {
+            list-style: none;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.3s;
+            background-color: rgb(115, 124, 183);
+        }
+
+        ul.chat-list li:hover {
+            background-color: rgb(157, 173, 224);
+        }
+
+        /* Style the chat list item links */
+        a.chat_list_names {
+            text-decoration: none;
+            color: #0a0a0a;
+            background-color: rgb(252, 252, 252);
+            height: 90px;
+            width: 100%; /* Adjust width for small screens */
+            border-radius: 8px;
+            font-weight: normal;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: inline-block;
+            text-align: center;
+            border: 1px solid #f9f7f7;
+        }
+
+        /* Add some spacing between list items */
+        ul.chat-list li + li {
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                height: 100vh;
+                width: 100%; /* Adjust width for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+<nobr>
+<a class="navbar-brand logo" href="/"> StudyBuddy</a>
+<a href="/"><img src="{% static '../static/images/homelogo.png'' %}" alt="StudyBuddy Logo" width="40" height="40"></a>
+</nobr>
+<div style="margin-top: 2%;" class="card-body chat_list">
+    <nav class="sidebar">
+        <ul class="list-group" style="list-style-type: none;">
+            <h1>New Messages</h1>
+            {% for user_with_chat in users_with_chats %}
+                <li class="list-group-item">
+                    <nobr>
+                        <a style="text-decoration: none;" class="chat_list_names" href="{% url 'chat_page' user_with_chat.username %}">
+                            {{ user_with_chat.username }} <p style="color: black; font-size: small">wants to connect with you!!!</p><br>
+                        </a>
+                    </nobr>
+                </li><br>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
