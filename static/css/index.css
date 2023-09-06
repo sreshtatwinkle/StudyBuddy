@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0px;
 }
+html *{
+  font-family: candara;
+}
 body{
     
   background-color: white; 
@@ -18,7 +21,7 @@ body{
 .index_text{
     margin-top: 0%;
     float: left;
-    font-family: 'candara';
+    /* font-family: 'candara'; */
     font-size: larger;
     padding: 10px;
     max-width: 2px;
@@ -29,7 +32,7 @@ body{
     margin-right:10%;
     float:right;
     color: rgb(59, 9, 116);
-    font-family: 'candara';
+    /* font-family: 'candara'; */
 
     
 }
@@ -41,7 +44,7 @@ body{
 }
 .index_text2{
     color:rgb(43, 52, 111);
-    font-family: 'candara';
+    /* font-family: 'candara'; */
     margin-left: 19%;
 }
 .cards {
@@ -193,9 +196,9 @@ body{
     opacity: 0.9;
 }
 
-.footerContainer{
+/* .footerContainer{
   font-family: candara;
-}
+} */
 
 .flex_container {
   display: flex;
