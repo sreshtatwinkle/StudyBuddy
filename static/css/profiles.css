@@ -1,3 +1,11 @@
+
+*{
+  margin: 0;
+  padding: 0px;
+}
+html *{
+  font-family: candara;
+}
 .profile_body{
     background-color: #f9f8fb;
 }
@@ -16,7 +24,7 @@
     border: 1px solid #ddd;
     padding: 20px;
    
-    background:  rgb(162, 142, 182);
+    background-color:  #969eca;
     color: #ddd;
     box-shadow: 0 15px 25px rgba(31, 35, 44, 0.6);
     border-radius: 10px;
@@ -40,7 +48,7 @@
     padding: 10px;
     color: #5f43b2;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
   }
   .profile_container{
     display: flex;
@@ -117,7 +125,7 @@
   .logo{
     color:  rgb(59, 9, 116);
     font-weight: bold;
-    font-family: candara;
+    /* font-family: candara; */
     font-size: xx-large;
   }
   .connect_btn{

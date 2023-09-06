@@ -1,7 +1,14 @@
-body {
-  font-family: Arial, sans-serif;
-  
+*{
+  margin: 0;
+  padding: 0px;
 }
+html *{
+  font-family: candara;
+}
+/* body {
+  font-family: candara;
+  
+} */
 .chat-list {
   list-style: none;
   padding: 0;
@@ -21,12 +28,13 @@ h1 {
   padding: 10px;
   border-color: #3e399a;
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 #chat {
   border: 1px solid #a4a4ed;
   padding: 10px;
-  margin-right: 40%;
+  margin-left: 20%;
+  margin-right: 20%;
   overflow-y: scroll;
   margin-top: 0%;
   display: flex;
@@ -94,7 +102,7 @@ button:hover {
   background-color: #3e399a;
 }
 .logo{
-  font-family: candara;
+  /* font-family: candara; */
   text-decoration: none;
   font-size: xx-large;
   color: #3e399a;
@@ -110,7 +118,7 @@ gap: 5px;
 
 .chat_list_names{
   color: black;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* font-family:candara; */
   font-size: x-large;
   
 }
