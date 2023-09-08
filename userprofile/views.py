@@ -46,7 +46,7 @@ def login_form(request):
            login(request,user)
            return redirect('addmodules')
        else:
-           messages.info('username or password not correct!!')
+           messages.info(request,'username or password not correct!!')
      return render(request,'login.html')
     #    
 
